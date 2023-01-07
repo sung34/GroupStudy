@@ -1,0 +1,61 @@
+main {
+  background-image: url('https://picsum.photos/1600/900');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-wrapper {
+  width: 400px;
+  height: 400px;
+  backdrop-filter: blur(20px);
+  border-radius: 10px;
+  padding: 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: #fff;
+}
+
+main .clock-container span{
+  display: block;
+  text-align: center;
+  font-size: 42px;
+  font-weight: 700;
+}
+
+main .weather-container .weather-info{
+  font-size: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 10px;
+
+}
+
+main .weather-container .weather-info img{
+  width: 80px;
+}
+
+main .weather-container .weather-info .weather-info__degree {
+  position: relative;
+}
+
+main .weather-container .weather-info .weather-info__degree li{
+  visibility: hidden;
+  cursor: pointer;
+
+}
+main .weather-container .weather-info .weather-info__degree li:first-child {
+  visibility: visible;
+}
+
+main .weather-container .weather-info .weather-info__degree li:first-child:hover ~li {
+  visibility: visible;
+}
